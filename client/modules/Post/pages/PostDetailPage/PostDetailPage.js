@@ -61,6 +61,33 @@ export class PostDetailPage extends React.Component {
     );
   }
 
+  render() {
+    const {props} = this;
+    return (
+      <div>
+        <Helmet title={props.post.title} />
+        <Link 
+          to='/'
+          className={styles['back-button']} 
+          onClick={this.props.showEditPost ? this.props.toggleEditPost : null}
+        >
+          <FormattedMessage id='backToMain' />
+        </Link>
+        <a
+          className={styles['edit-post-button']} 
+          href="#"
+          onClick={this.props.toggleEditPost}>
+            <FormattedMessage id='editPost' />  
+        </a>
+        {
+          this.props.showEditPost
+            ? this.renderPostForm()
+            : this.renderPost()
+        }
+      </div>
+    );
+  }
+
   handleInputChange = (event) => {
     const { value, name } = event.target;
 
@@ -92,9 +119,7 @@ function mapStateToProps(state, props) {
 
 // Actions required to provide data for this component to render in server side.
 
-PostDetailPage.need = [params => {
-  return fetchPost(params.cuid);
-}];
+
 
 PostDetailPage.propTypes = {
   post: PropTypes.shape({

@@ -1,13 +1,15 @@
 .footer{
   text-align: center;
   padding: 56px 0;
+  background: url('../../header-bk.png') center;
   background-size: cover;
+
 }
 
 .footer p{
   margin: 0 0 8px 0;
   font-size: 14px;
-  color: #FFF;
+  color: black;
 }
 
 .footer a{

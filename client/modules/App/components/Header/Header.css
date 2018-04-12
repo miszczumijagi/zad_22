@@ -1,5 +1,5 @@
 .header {
-  background: #eee url('../../header-bk.png') center;
+  background: url('../../header-bk.png') center;
   background-size: cover;
   border-bottom: 1px solid #ccc;
 }
@@ -33,6 +33,10 @@
   float: right;
 }
 
+.menu {
+  display: inline-block;
+
+}
 .language-switcher {
   background: rgba(0, 0, 0, 0.1);
 }
@@ -42,6 +46,7 @@
   width: 980px;
   margin: auto;
   text-align: right;
+  display: inline-block;
 }
 
 .language-switcher li {
