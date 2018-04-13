@@ -1,7 +1,8 @@
 .footer{
   text-align: center;
   padding: 56px 0;
-  background: url('../../header-bk.png') center;
+  /*background: #fff url('../../header-bk.png') center;*/
+  background:#528a9c;
   background-size: cover;
 
 }
@@ -9,7 +10,7 @@
 .footer p{
   margin: 0 0 8px 0;
   font-size: 14px;
-  color: black;
+  color: #FFF;
 }
 
 .footer a{
